@@ -5,3 +5,13 @@ canvas{
 main{
     text-align: center;
 }
+
+p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    color: #68C3FA;
+}
+
+.audio{
+    margin: 20px;
+}

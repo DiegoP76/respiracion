@@ -5,6 +5,7 @@ pincel.fillStyle = "lightgrey";
 pincel.fillRect(0,0,400,400); 
 
 
+
 function disenarTriangulo(){
 
     pincel.fillStyle="lightblue";
@@ -51,6 +52,8 @@ function actualizarPantalla(){
         x = x + 1;
         y = y - 1.6;
         estado = 1   
+        //////////////////
+        document.querySelector("p").innerText = "inhalar";
 
     }else if (x > 200 && x <=350 && estado != 3){  //retener
         x = x + 1;
@@ -58,6 +61,8 @@ function actualizarPantalla(){
         if (x == 351){
             estado = 3;
         }
+
+        document.querySelector("p").innerText = "retener";
 
     }else if (x >= 50 &&  estado == 3){   //exhalar
         x = x - 2;
@@ -67,8 +72,11 @@ function actualizarPantalla(){
             estado = 1;
             x = 50;
         }
+
+        document.querySelector("p").innerText = "exhalar";
     }
 
 }
 
 setInterval(actualizarPantalla,30);
+
